@@ -19,6 +19,7 @@ target/
 *.iml
 *.ipr
 /book-store/target/
+/book-store/main/angular-bookstore/node_modules
 
 ### NetBeans ###
 /nbproject/private/
