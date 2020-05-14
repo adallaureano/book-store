@@ -34,6 +34,11 @@ export class BookService {
     const searchUrl = `${this.baseUrl}/search/searchbykeyword?name=${keyword}`;
     return this.getBookList(searchUrl);
   }
+
+  getBookDatails(bookId: number): Observable<Book> {
+    const bookDetailsUrl = `${this.baseUrl}/${bookId}`;
+    return this.httpClient.get<Book>(bookDetailsUrl);
+  }
 }
 
 interface GetResponseBooks{
@@ -41,7 +46,6 @@ interface GetResponseBooks{
     books: Book[];
   }
 }
-
 
 interface GetResponseBookCategory{
   _embedded: {
